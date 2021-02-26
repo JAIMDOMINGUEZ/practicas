@@ -33,8 +33,8 @@ public class PruebaPersonaje{
             do{
                 ed = (int)Math.random()*250);
                 System.out.println(ed);
-                if(ed ==150){
-                    System.out.println("**Bingo 150**")
+                if(ed ==150){ 
+                    System.out.println(" **Bingo 150**")
                     continue outfor;
                 }
 
