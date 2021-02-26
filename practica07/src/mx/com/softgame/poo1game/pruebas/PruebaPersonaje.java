@@ -1,3 +1,4 @@
+//Finalizacion 9:41
 package mx.com.softgame.poo1game.pruebas;
 import java.lang.Math;
 import mx.com.softgame.poo1game.personajes.Personaje;
