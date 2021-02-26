@@ -3,14 +3,29 @@ import java.lang.Math;
 import mx.com.softgame.poo1game.personajes.Personaje;
 public class PruebaPersonaje{
     public static void main(String[]args){
-        Personaje per01 = new Personaje("Aline");
-        per01.setEdad(200);
+        Personaje per01 = new Personaje("Omar");
+        
         Personaje per02 = new Personaje("Erick");
-        per02.setEdad(10);
-        Personaje per03 = new Personaje("Alan");
-        per03.setEdad(1);
+        //per02.setEdad(10);
+        Personaje per03 = new Personaje("Wendy");
+       // per03.setEdad(1);
         Personaje per04 = new Personaje("Lesly");
-        per04.setEdad(-10);
+        //per04.setEdad(-10);
+        for(int i =0;i<3;i++){
+            per01.setEdad((int)Math.random()*250);
+            System.out.println("Omar"+per01.getDetalle()+"se modifico la edad");
+                
+            per01.setEdad((int)Math.random()*250);
+            System.out.println(per01.getDetalle());
+                
+                
+
+        }
+
+
+    }
+        
+        /*
         Personaje per05 = new Personaje("Brian");
         per05.setEdad(500);
         System.out.println(per01.getDetalle());
@@ -33,5 +48,7 @@ public class PruebaPersonaje{
         System.out.println(per08.getDetalle());
         System.out.println(per09.getDetalle());
         System.out.println(per10.getDetalle());
-        }
+        */
+    }
+        
 }
