@@ -6,17 +6,33 @@ public class PruebaPersonaje{
         Personaje per01 = new Personaje("Omar");
         
         Personaje per02 = new Personaje("Erick");
-        //per02.setEdad(10);
+       
         Personaje per03 = new Personaje("Wendy");
-       // per03.setEdad(1);
+       
         Personaje per04 = new Personaje("Lesly");
-        //per04.setEdad(-10);
+        
         for(int i =0;i<3;i++){
-            per01.setEdad((int)Math.random()*250);
-            System.out.println("Omar"+per01.getDetalle()+"se modifico la edad");
-                
-            per01.setEdad((int)Math.random()*250);
-            System.out.println(per01.getDetalle());
+            ed = (int)Math.random()*250),
+            if(per01.setEdad(ed){
+                System.out.println("Omar"+per01.getDetalle()+"se modifico la edad");
+            }else:{
+                System.out.println("Omar"+per01.getDetalle()+"sin modificacion de edad");
+            }
+            if(per02.setEdad(ed)){
+                System.out.println("Erick"+per02.getDetalle()+"se modifico la edad");
+            }else:{
+                System.out.println("Erick"+per02.getDetalle()+"sin modificacion de edad");
+            }
+             if(per03.setEdad(ed)){
+                System.out.println("Wendy"+per03.getDetalle()+"se modifico la edad");
+            }else:{
+                System.out.println("Wendy"+per03.getDetalle()+"sin modificacion de edad");
+            }
+            do{
+
+            }while(!)
+
+            
                 
                 
 
@@ -25,30 +41,7 @@ public class PruebaPersonaje{
 
     }
         
-        /*
-        Personaje per05 = new Personaje("Brian");
-        per05.setEdad(500);
-        System.out.println(per01.getDetalle());
-        System.out.println(per02.getDetalle());
-        System.out.println(per03.getDetalle());
-        System.out.println(per04.getDetalle());
-        System.out.println(per05.getDetalle());
-        Personaje per06 = per05;
-        Personaje per07 = per04;
-        Personaje per08 = per03;
-        Personaje per09 = per02;
-        Personaje per10 = per01;
-        per06.setNombre("Jorge Eduardo");
-        per08.setNombre("Yosselin");
-        per10.setNombre("Ana");
-        per07.setEdad((int)Math.random()*1000);
-        per09.setEdad((int)Math.random()*1000);
-        System.out.println(per06.getDetalle());
-        System.out.println(per07.getDetalle());
-        System.out.println(per08.getDetalle());
-        System.out.println(per09.getDetalle());
-        System.out.println(per10.getDetalle());
-        */
+        
     }
         
 }
