@@ -9,6 +9,7 @@ public class Personaje{
     public Personaje(String nombre){
         this.nombre = nombre;
         this.edad= 0;
+        int b;
     }
     public int getEdad(){
         return edad;
