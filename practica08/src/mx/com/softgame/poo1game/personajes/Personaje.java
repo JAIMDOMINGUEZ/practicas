@@ -27,7 +27,7 @@ public class Personaje{
     public int getVida(){
         return vida;
     }
-    public boolean setVida(int vida){
+    public void setVida(int vida){
         if((vida>0) && (vida<100)){
             this.vida = vida;
         }
