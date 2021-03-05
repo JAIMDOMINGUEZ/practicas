@@ -1,5 +1,5 @@
 package mx.com.softgame.poo1game.personajes.malos;
-package mx.com.softgame.poo1game.personajes.buenos.Planta;
+import mx.com.softgame.poo1game.personajes.buenos.Planta;
 import mx.com.softgame.poo1game.personajes.Personaje;
 public class Zombie extends Personaje{
     boolean ataque;
