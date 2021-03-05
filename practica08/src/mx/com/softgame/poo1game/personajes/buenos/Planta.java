@@ -3,7 +3,7 @@ import mx.com.softgame.poo1game.personajes.Personaje;
 import mx.com.softgame.poo1game.personajes.malos.Zombie;
 
 public class Planta extends Personaje{
-    char escudo;
+    protected char escudo;
     public Planta(String nombre,int vida,char escudo){
         super(nombre,vida);
         this.escudo = escudo;
