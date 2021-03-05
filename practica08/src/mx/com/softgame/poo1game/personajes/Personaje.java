@@ -6,11 +6,27 @@ package mx.com.softgame.poo1game.personajes;
 public class Personaje{
     private String nombre;
     private int vida;
+    public Personaje(String nombre,int vida){
+        this.nombre = nombre;
+        this.vida= vida;
+        
+    }
     public Personaje(String nombre){
         this.nombre = nombre;
-        this.edad= 0;
-        int b;
+        this.vida= 3;    
     }
+    
+    public void decVida(){
+
+    }
+    public void decVida(int vida){
+
+    }
+
+
+
+
+
     public int getVida(){
         return vida;
     }
@@ -34,6 +50,6 @@ public class Personaje{
         System.out.println("Hola Alumno de POO "+nombre);
     }
     public String getDetalle(){
-        return nombre+"\t"+edad;   
+        return nombre+"\t"+vida;   
     }
 }
