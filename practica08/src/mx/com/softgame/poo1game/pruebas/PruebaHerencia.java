@@ -15,6 +15,7 @@ public class PruebaHerencia{
         Zombie zom02 = new Zombie("Eduardo",true);
         Zombie zom03 = new Zombie("Esmeralda");
         Personaje [] personajes = {per01,per02,plan01,plan02,plan03,plan04,zom01,zom02};  
+        /*
         for (Personaje j: personajes){
             System.out.println(j.getDetalle());
             if(j instanceof Planta){
@@ -34,6 +35,7 @@ public class PruebaHerencia{
             }
             System.out.println();
         }
+        */
     }
 
 

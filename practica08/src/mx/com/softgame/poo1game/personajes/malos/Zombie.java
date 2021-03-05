@@ -1,4 +1,5 @@
 package mx.com.softgame.poo1game.personajes.malos;
+package mx.com.softgame.poo1game.personajes.buenos.Planta;
 import mx.com.softgame.poo1game.personajes.Personaje;
 public class Zombie extends Personaje{
     boolean ataque;
@@ -17,17 +18,17 @@ public class Zombie extends Personaje{
         return ataque;
     }
     public void decVida(){
-        if(!ataque){
-            super.vida=(vida--)*3;
+        if(ataque == false){
+            super.deckVida(3);
         }else{
-            super.vida=(vida--)*2;
+            super.deckVida(2);
         }
     }
     public void decVida(int menosVida){
-        if(!ataque){
-            super.vida=(menosVida--)*3;
+        if(ataque == false){
+            super.deckVida((menosVida*3));
         }else{
-            super.vida=(menosVida--)*2;
+            super.deckVida((menosVida*2));
         }
         
     }

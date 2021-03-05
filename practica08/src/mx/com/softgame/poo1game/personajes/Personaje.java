@@ -24,11 +24,6 @@ public class Personaje{
             vida = vida-menosVida;
         }
     }
-
-
-
-
-
     public int getVida(){
         return vida;
     }

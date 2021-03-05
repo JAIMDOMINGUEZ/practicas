@@ -1,5 +1,6 @@
 package mx.com.softgame.poo1game.personajes.buenos;
 import mx.com.softgame.poo1game.personajes.Personaje;
+package mx.com.softgame.poo1game.personajes.malos.Zombie;
 public class Planta extends Personaje{
     char escudo;
     public Planta(String nombre,int vida,char escudo){
@@ -10,24 +11,27 @@ public class Planta extends Personaje{
         this(nombre,3,escudo);
     }
     public Planta(String nombre,int vida){
-        super(nombre,vida,'A');
+        this(nombre,vida,'A');
     }
     public Planta(String nombre){
         this(nombre,3,'A');
     }
     public void decVida(){
         if(escudo == 'A'){
-            vida=(vida--)*2;
+            super.deckVida(2);
         }
     }
-    public void decVida(int vida){
+    public void decVida(int menosVida){
         if(escudo == 'A'){
-            vida=(this.vida--)*2;
+            super.deckVida(menosVida*2);
         }
         
     }
     public char getEscudo(){
-        return vida;
+        return escudo;
     } 
+    public String getDetalle(){
+        return super.getDetalle()+escudo;
+    }
 
 }
