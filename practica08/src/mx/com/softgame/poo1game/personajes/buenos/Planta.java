@@ -18,12 +18,12 @@ public class Planta extends Personaje{
     }
     public void decVida(){
         if(escudo == 'A'){
-            super.deckVida(2);
+            super.decVida(2);
         }
     }
     public void decVida(int menosVida){
         if(escudo == 'A'){
-            super.deckVida(menosVida*2);
+            super.decVida(menosVida*2);
         }
         
     }
