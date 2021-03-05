@@ -17,10 +17,10 @@ public class Personaje{
     }
     
     public void decVida(){
-
+        vida--;
     }
     public void decVida(int vida){
-
+        vida++;
     }
 
 
@@ -50,6 +50,6 @@ public class Personaje{
         System.out.println("Hola Alumno de POO "+nombre);
     }
     public String getDetalle(){
-        return nombre+"\t"+vida;   
+        return nombre+"\t"+vida+"\t"+escudo;   
     }
 }
