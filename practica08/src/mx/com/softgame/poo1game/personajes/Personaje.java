@@ -13,14 +13,16 @@ public class Personaje{
     }
     public Personaje(String nombre){
         this.nombre = nombre;
-        this.vida= 3;    
+        vida= 3;    
     }
     
     public void decVida(){
-        vida--;
+        decVida(1);
     }
-    public void decVida(int vida){
-        vida++;
+    public void decVida(int menosVida){
+        if((vida-menosVida)>0){
+            vida = vida-menosVida;
+        }
     }
 
 

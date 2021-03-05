@@ -28,12 +28,12 @@ public class Planta extends Personaje{
         }
     }
     public void decVida(int vida){
-        if(escudo == A){
+        if(escudo == 'A'){
             vida=(this.vida--)*2;
         }
         
     }
-    public char escudo(){
+    public char getEscudo(){
         return vida;
     } 
 
