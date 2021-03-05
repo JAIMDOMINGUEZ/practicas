@@ -14,7 +14,7 @@ public class Zombie extends Personaje{
         
     }
     boolean getAtaque(){
-        return ataque
+        return ataque;
     }
     public void decVida(){
         if(!ataque){

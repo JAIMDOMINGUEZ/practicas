@@ -3,27 +3,20 @@ import mx.com.softgame.poo1game.personajes.Personaje;
 public class Planta extends Personaje{
     char escudo;
     public Planta(String nombre,int vida,char escudo){
-        this.nombre = nombre;
-        this.vida= vida;
+        super(nombre,vida);
         this.escudo = escudo;
     }
     public Planta(String nombre,char escudo){
-        this.nombre = nombre;
-        this.vida= 3;
-        this.escudo = escudo;
+        this(nombre,3,escudo);
     }
     public Planta(String nombre,int vida){
-        this.nombre = nombre;
-        this.vida= vida;
-        this.escudo = A;
+        super(nombre,vida,'A');
     }
     public Planta(String nombre){
-        this.nombre = nombre;
-        this.vida= 3;
-        this.escudo = A;
+        this(nombre,3,'A');
     }
     public void decVida(){
-        if(escudo == A){
+        if(escudo == 'A'){
             vida=(vida--)*2;
         }
     }

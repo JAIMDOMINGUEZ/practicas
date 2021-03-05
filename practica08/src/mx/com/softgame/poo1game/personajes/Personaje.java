@@ -33,9 +33,9 @@ public class Personaje{
         return vida;
     }
     public boolean setVida(int vida){
-        if((vida>0) && (vida=<100)){
+        if((vida>0) && (vida<100)){
             this.vida = vida;
-         
+        }
     }
     public void setNombre(String nombre){
         if(nombre.length()>3 && nombre.length()<10 ){
@@ -49,6 +49,6 @@ public class Personaje{
         System.out.println("Hola Alumno de POO "+nombre);
     }
     public String getDetalle(){
-        return nombre+"\t"+vida+"\t"+escudo;   
+        return nombre+"\t"+vida; 
     }
 }
