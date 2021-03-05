@@ -23,11 +23,13 @@ public class Planta extends Personaje{
         this.escudo = A;
     }
     public void decVida(){
-        vida--;
+        if(escudo == A){
+            vida=(vida--)*2;
+        }
     }
     public void decVida(int vida){
         if(escudo == A){
-            vida=(vida--)*2;
+            vida=(this.vida--)*2;
         }
         
     }

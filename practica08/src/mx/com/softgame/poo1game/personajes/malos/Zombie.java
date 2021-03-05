@@ -21,13 +21,17 @@ public class Zombie extends Personaje{
         return ataque
     }
     public void decVida(){
-        vida--;
-    }
-    public void decVida(int vida){
         if(escudo == false){
             vida=(vida--)*3;//
         }else{
             vida=(vida--)*2;
+        }
+    }
+    public void decVida(int vida){
+        if(escudo == false){
+            vida=(this.vida--)*3;//
+        }else{
+            vida=(this.vida--)*2;
         }
         
     }

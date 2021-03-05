@@ -10,7 +10,9 @@ public class PruebaHerencia{
         Planta plan02 = new Planta("Ricardo",50);
         Planta plan03 = new Planta("vania",'C');
         Planta plan04 = new Planta("Alan");
-        Zombie zom01 = new Zombie("Karen");
+        Zombie zom01 = new Zombie("Karen",80,false);
+        Zombie zom02 = new Zombie("Eduardo",true);
+        Zombie zom01 = new Zombie("Esmeralda");
     }
 
 
