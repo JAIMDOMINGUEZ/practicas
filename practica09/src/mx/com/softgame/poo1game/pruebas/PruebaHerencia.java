@@ -5,9 +5,6 @@ import mx.com.softgame.poo1game.personajes.buenos.Planta;
 import mx.com.softgame.poo1game.personajes.malos.Zombie;
 public class PruebaHerencia{
     public static void main(String[]args){
-        
-        
-        
         Personaje per01 = new Personaje("Valeria",99);
         Personaje per02 = new Personaje("Octavio");
         Planta plan01 = new Planta("Wendy",10,'B');
@@ -17,11 +14,20 @@ public class PruebaHerencia{
         Zombie zom01 = new Zombie("Karen",80,true);
         Zombie zom02 = new Zombie("Eduardo",true);
         Zombie zom03 = new Zombie("Esmeralda");
-        Personaje[] personajes = {new Personaje(Omar,99),new Planta("Karen",50), new Zombie("Hanna",80,false),new Personaje("Omar",99),new Planta("Karen",50),new Zombie("Hanna",80,false)} 
+        Personaje[] personajes = {new Personaje(Omar,99),new Planta("Karen",50), new Zombie("Hanna",80,false),new Personaje("Omar",99),new Planta("Karen",50),new Zombie("Hanna",80,false)};
         while(i<personajes.length){
             outfor:
             for(personaje p : personajes){
-
+                if(p instanceof i){
+                    System.out.println(p.toString()+"es identico a"+i.toString()+",son el mismo objeto***");
+                    }
+                    else if(p.equals(i)){
+                        System.out.println(p.toString()+"es igual a"+i.toString()+",son diferentes objetos**");
+                    }
+                    else{
+                        System.out.println(p.toString()+"!="+i.toString()+"false");
+                    }
+                
             }
         }
         /*
