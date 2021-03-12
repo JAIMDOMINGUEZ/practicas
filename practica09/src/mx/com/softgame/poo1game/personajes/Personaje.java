@@ -3,8 +3,8 @@
 package mx.com.softgame.poo1game.personajes;
 
 public class Personaje{
-    private String nombre;
-    private int vida;
+    protected String nombre;
+    protected int vida;
     public Personaje(String nombre,int vida){
         this.nombre = nombre;
         this.vida= vida;
@@ -42,7 +42,15 @@ public class Personaje{
     public void saludar(){
         System.out.println("Hola Alumno de POO "+nombre);
     }
-    public String getDetalle(){
+    public String toString(){
         return nombre+"\t"+vida; 
+    }
+    public boolean equals(object x){
+        if(nombre == x.nombre){
+            if(vida==x.vida){
+                return true;
+            }
+        }
+
     }
 }

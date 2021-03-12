@@ -30,7 +30,14 @@ public class Zombie extends Personaje{
         }else{
             super.decVida((menosVida*2));
         }
-        
+    }
+    public String toString(){
+        return super.toString()+ataque;
+    }
+    public boolean equals(object x){
+        if(ataque==x.ataque){
+            return true;
+        }  
     }
 
 }
