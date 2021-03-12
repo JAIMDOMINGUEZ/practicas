@@ -41,10 +41,8 @@ public class Planta extends Personaje{
             if ( escudo == pl.escudo){
                 resultado = true;
                 return resultado;
-            }
-        return resultado;
-            
-        }
+            }   
+        }return resultado;
     }
 
 }

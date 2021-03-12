@@ -52,9 +52,7 @@ public class Personaje{
             if ( (nombre == p.nombre) && (vida == p.vida)){
                 resultado = true;
                 return resultado;
-            }
-        return resultado;
-            
-        }
+            }   
+        }return resultado;
     }
 }

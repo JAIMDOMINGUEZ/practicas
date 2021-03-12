@@ -42,8 +42,8 @@ public class Zombie extends Personaje{
                 resultado = true;
                 return resultado;
             }
-        return resultado;
-        } 
+        
+        }return resultado;
     }
 
 }

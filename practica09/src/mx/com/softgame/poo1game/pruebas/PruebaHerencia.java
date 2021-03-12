@@ -14,18 +14,21 @@ public class PruebaHerencia{
         Zombie zom01 = new Zombie("Karen",80,true);
         Zombie zom02 = new Zombie("Eduardo",true);
         Zombie zom03 = new Zombie("Esmeralda");
-        Personaje[] personajes = {new Personaje(Omar,99),new Planta("Karen",50), new Zombie("Hanna",80,false),new Personaje("Omar",99),new Planta("Karen",50),new Zombie("Hanna",80,false)};
+        Personaje[] personajes = {new Personaje("Omar",99),new Planta("Karen",50), new Zombie("Hanna",80,false),new Personaje("Omar",99),new Planta("Karen",50),new Zombie("Hanna",80,false)};
+        int i =0;
+        outfor:
         while(i<personajes.length){
-            outfor:
-            for(personaje p : personajes){
-                if(p instanceof i){
-                    System.out.println(p.toString()+"es identico a"+i.toString()+",son el mismo objeto***");
+            
+            for(Personaje p : personajes){
+                if(p == personajes[i]){
+                    System.out.println(p.toString()+"es identico a"+personajes[i].toString()+",son el mismo objeto***");
                     }
-                    else if(p.equals(i)){
-                        System.out.println(p.toString()+"es igual a"+i.toString()+",son diferentes objetos**");
+                    else if(p.equals(personajes[i])){
+                        System.out.println(p.toString()+"es igual a"+personajes[i].toString()+",son diferentes objetos**");
                     }
                     else{
-                        System.out.println(p.toString()+"!="+i.toString()+"false");
+                        System.out.println(p.toString()+"!="+personajes[i].toString()+"false");
+                        continue outfor;
                     }
                 
             }
