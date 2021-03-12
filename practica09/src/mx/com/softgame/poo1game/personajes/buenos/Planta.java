@@ -36,12 +36,13 @@ public class Planta extends Personaje{
     }
     public boolean equals(Object x){
         boolean resultado = false;
-        if ( (o != null) && (o instanceof Planta) ) {
-            Personaje pl = (Planta) o;
+        if ( (x != null) && (x instanceof Planta) ) {
+            Planta pl = (Planta) x;
             if ( escudo == pl.escudo){
                 resultado = true;
                 return resultado;
             }
+        return resultado;
             
         }
     }

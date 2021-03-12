@@ -2,7 +2,7 @@ package mx.com.softgame.poo1game.personajes.malos;
 import mx.com.softgame.poo1game.personajes.buenos.Planta;
 import mx.com.softgame.poo1game.personajes.Personaje;
 public class Zombie extends Personaje{
-    private boolean ataque;
+    protected boolean ataque;
     public Zombie(String nombre, int vida, boolean ataque){
         super(nombre,vida);
         this.ataque = ataque;
@@ -36,13 +36,13 @@ public class Zombie extends Personaje{
     }
     public boolean equals(Object x){
         boolean resultado = false;
-        if ( (o != null) && (o instanceof Zombie) ) {
-            Personaje z = (Planta) o;
+        if ( (x != null) && (x instanceof Zombie) ) {
+            Zombie z = (Zombie) x;
             if (ataque == z.ataque){
                 resultado = true;
                 return resultado;
             }
-            
+        return resultado;
         } 
     }
 

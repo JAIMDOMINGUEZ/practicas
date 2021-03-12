@@ -47,12 +47,13 @@ public class Personaje{
     }
     public boolean equals(Object x){
         boolean resultado = false;
-        if ( (o != null) && (o instanceof Personaje) ) {
-            Personaje p = (Personaje) o;
-            if ( (nombre == p.nombre) && (vida == p.vida){
+        if ( (x != null) && (x instanceof Personaje) ) {
+            Personaje p = (Personaje) x;
+            if ( (nombre == p.nombre) && (vida == p.vida)){
                 resultado = true;
                 return resultado;
             }
+        return resultado;
             
         }
     }
