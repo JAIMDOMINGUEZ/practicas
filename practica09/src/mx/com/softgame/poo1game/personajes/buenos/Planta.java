@@ -34,11 +34,16 @@ public class Planta extends Personaje{
     public String toString(){
         return super.toString()+escudo;
     }
-    public boolean equals(object x){
-        if(escudo==x.escudo){
-            return true;
+    public boolean equals(Object x){
+        boolean resultado = false;
+        if ( (o != null) && (o instanceof Planta) ) {
+            Personaje pl = (Planta) o;
+            if ( escudo == pl.escudo){
+                resultado = true;
+                return resultado;
+            }
+            
         }
-        
     }
 
 }

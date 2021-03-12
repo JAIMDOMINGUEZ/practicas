@@ -45,12 +45,15 @@ public class Personaje{
     public String toString(){
         return nombre+"\t"+vida; 
     }
-    public boolean equals(object x){
-        if(nombre == x.nombre){
-            if(vida==x.vida){
-                return true;
+    public boolean equals(Object x){
+        boolean resultado = false;
+        if ( (o != null) && (o instanceof Personaje) ) {
+            Personaje p = (Personaje) o;
+            if ( (nombre == p.nombre) && (vida == p.vida){
+                resultado = true;
+                return resultado;
             }
+            
         }
-
     }
 }
