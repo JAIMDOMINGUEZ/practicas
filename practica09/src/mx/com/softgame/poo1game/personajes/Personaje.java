@@ -50,8 +50,7 @@ public class Personaje{
         if ( (x != null) && (x instanceof Personaje) ) {
             Personaje p = (Personaje) x;
             if ( (nombre == p.nombre) && (vida == p.vida)){
-                resultado = true;
-                return resultado;
+                return true;
             }   
         }return resultado;
     }

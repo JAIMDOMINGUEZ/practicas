@@ -14,11 +14,11 @@ public class PruebaHerencia{
         Zombie zom01 = new Zombie("Karen",80,true);
         Zombie zom02 = new Zombie("Eduardo",true);
         Zombie zom03 = new Zombie("Esmeralda");
-        Personaje[] personajes = {new Personaje("Omar",99),new Planta("Karen",50), new Zombie("Hanna",80,false),new Personaje("Omar",99),new Planta("Karen",50),new Zombie("Hanna",80,false)};
+        Personaje[] personajes = {new Personaje("Omar",99),new Planta("Karen",50), new Zombie("Hanna",80,false),new Personaje("Omar",99),new Planta("Karen",50),new Zombie("Hanna",80,false),new Planta("Jaime",5,'A')};
         int i =0;
         
         while(i<personajes.length){
-            outfor:
+            
             for(Personaje p : personajes){
                 if(p == personajes[i]){
                     System.out.println(p.toString()+"es identico a "+personajes[i].toString()+", son el mismo objeto***");
@@ -30,7 +30,7 @@ public class PruebaHerencia{
                         System.out.println(p.toString()+"!="+personajes[i].toString()+"false");
                     
                     }
-                break outfor;
+                
             }
             i++;
         }
