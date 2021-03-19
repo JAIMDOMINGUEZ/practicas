@@ -1,18 +1,24 @@
 //Jose Jaime Dominguez Sandoval
 //Hora de inicio: 7:33
 package mx.com.softgame.poo1game.personajes;
-
+import static mx.com.softgame.poo1game.Utils.Utileria.*;
 public class Personaje{
     protected String nombre;
     protected int vida;
+    private final int id;
+    public Personaje(int id){
+        this.id = getID();
+    }
     public Personaje(String nombre,int vida){
         this.nombre = nombre;
         this.vida= vida;
+        id = getID();
         
     }
     public Personaje(String nombre){
         this.nombre = nombre;
         vida= 3;    
+        id = getID();
     }
     
     public void decVida(){
@@ -43,7 +49,7 @@ public class Personaje{
         System.out.println("Hola Alumno de POO "+nombre);
     }
     public String toString(){
-        return nombre+"\t"+vida; 
+        return id+"\t"+nombre+"\t"+vida; 
     }
     public boolean equals(Object x){
         boolean resultado = false;
@@ -54,4 +60,8 @@ public class Personaje{
             }   
         }return resultado;
     }
+    public final String getIdVida(){
+        return id+""+vida;
+    }
+
 }
