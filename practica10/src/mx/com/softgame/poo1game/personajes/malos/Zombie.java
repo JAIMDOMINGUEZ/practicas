@@ -45,8 +45,8 @@ public final class Zombie extends Personaje{
         
         }return resultado;
     }
-    public String getIdVida(){
-        return getIdVida()+ataque;//el metodo del padre es final y no se puede modificar
-    }
+    /*public String getIdVida(){
+        return super.getIdVida()+""+ataque;//el metodo del padre es final y no se puede modificar
+    }*/
 
 }

@@ -16,7 +16,7 @@ public class PruebaHerencia{
         Zombie zom03 = new Zombie("Esmeralda");
         Personaje[] personajes = {new Personaje("Omar",99),new Planta("Karen",50), new Zombie("Hanna",80,false),new Personaje("Omar",99),new Planta("Karen",50),new Zombie("Hanna",80,false),new Planta("Jaime",5,'A')};
         int i =0;
-        System.out.println(personajes[3].getIdVida());
+        //System.out.println(personajes[3].getIdVida());
         while(i<personajes.length){
             
             for(Personaje p : personajes){
@@ -36,7 +36,7 @@ public class PruebaHerencia{
                     
                     
                 
-            }
+            }System.out.println("............................");
             i++;
         }
         

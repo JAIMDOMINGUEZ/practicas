@@ -44,8 +44,8 @@ public class Planta extends Personaje{
             }   
         }return resultado;
     }
-    public String getIdVida(){
-        return getIdVida()+escudo;//el metodo del padre es final y no se puede modificar
-    }
+    /*public String getIdVida(){
+        return getIdVida()+""+escudo;//el metodo del padre es final y no se puede modificar
+    }*/
 
 }

@@ -5,6 +5,6 @@ public class Utileria{
         this.contadorID = contadorID;
     }
     public static int getID(){
-        return ++contadorID;
+        return (++contadorID);
     }
 }
