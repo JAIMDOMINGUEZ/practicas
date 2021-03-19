@@ -61,7 +61,7 @@ public class Personaje{
         }return resultado;
     }
     public final String getIdVida(){
-        return id+" "+vida;
+        return id+"  "+vida;
     }
 
 }
