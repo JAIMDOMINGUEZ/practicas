@@ -4,5 +4,5 @@ public class Zombiecono extends Zombie{
     public Zombiecono(String nombre){
         super(nombre);
     }
-    //la clase Zombie es final no se puede heredar de el
+    //la clase Zombie es final no se puede heredar de ella
 }

@@ -49,7 +49,7 @@ public class Personaje{
         System.out.println("Hola Alumno de POO "+nombre);
     }
     public String toString(){
-        return id+"\t"+nombre+"\t"+vida; 
+        return "["+id+"]"+"\t"+nombre+"\t"+"("+vida+")"; 
     }
     public boolean equals(Object x){
         boolean resultado = false;

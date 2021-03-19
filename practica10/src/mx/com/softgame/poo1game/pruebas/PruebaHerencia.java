@@ -39,25 +39,7 @@ public class PruebaHerencia{
             }
             i++;
         }
-        /*
-        Personaje [] personajes = {per01,per02,plan01,plan02,plan03,plan04,zom01,zom02,zom03};  
-        for (Personaje j: personajes){
-            System.out.println(j.getDetalle());
-            if(j instanceof Planta){
-                Planta p = (Planta)j;
-                System.out.println("Soy planta"+p.getEscudo());
-            }
-            if(j instanceof Zombie){
-                Zombie z = (Zombie)j;
-                System.out.println("Soy zombie"+z.getAtaque());
-            }
-            int res =(int)(Math.random()*10);
-            j.decVida(res);
-            System.out.println(res);
-            System.out.println(j.getDetalle());
-           
-        }
-        */
+        
         
     }
 

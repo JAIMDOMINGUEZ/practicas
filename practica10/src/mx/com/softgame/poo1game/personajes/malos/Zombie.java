@@ -32,7 +32,7 @@ public final class Zombie extends Personaje{
         }
     }
     public String toString(){
-        return super.toString()+ataque;
+        return super.toString()+"{"+ataque+"}";
     }
     public boolean equals(Object x){
         boolean resultado = false;

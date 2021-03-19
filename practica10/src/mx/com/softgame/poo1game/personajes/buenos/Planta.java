@@ -32,7 +32,7 @@ public class Planta extends Personaje{
         return escudo;
     } 
     public String toString(){
-        return super.toString()+escudo;
+        return super.toString()+"{"+escudo+"}";
     }
     public boolean equals(Object x){
         boolean resultado = false;
