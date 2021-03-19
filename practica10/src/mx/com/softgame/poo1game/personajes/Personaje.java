@@ -4,7 +4,7 @@ package mx.com.softgame.poo1game.personajes;
 import static mx.com.softgame.poo1game.Utils.Utileria.*;
 public class Personaje{
     protected String nombre;
-    protected int vida;
+    private int vida;
     private final int id;
     public Personaje(int id){
         this.id = getID();

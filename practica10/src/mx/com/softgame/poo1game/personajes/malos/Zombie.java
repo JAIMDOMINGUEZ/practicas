@@ -45,5 +45,8 @@ public class Zombie extends Personaje{
         
         }return resultado;
     }
+    public String getIdVida(){
+        return getIdVida()+ataque;//el metodo del padre es final y no se puede modificar
+    }
 
 }
