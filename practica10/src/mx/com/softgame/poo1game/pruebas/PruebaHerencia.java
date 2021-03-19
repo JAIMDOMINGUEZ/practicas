@@ -5,7 +5,7 @@ import mx.com.softgame.poo1game.personajes.buenos.Planta;
 import mx.com.softgame.poo1game.personajes.malos.Zombie;
 public class PruebaHerencia{
     public static void main(String[]args){
-        Personaje per01 = new Personaje("Valeria",99);
+        /*Personaje per01 = new Personaje("Valeria",99);
         Personaje per02 = new Personaje("Octavio");
         Planta plan01 = new Planta("Wendy",10,'B');
         Planta plan02 = new Planta("Ricardo",50);
@@ -14,9 +14,10 @@ public class PruebaHerencia{
         Zombie zom01 = new Zombie("Karen",80,true);
         Zombie zom02 = new Zombie("Eduardo",true);
         Zombie zom03 = new Zombie("Esmeralda");
+        */
         Personaje[] personajes = {new Personaje("Omar",99),new Planta("Karen",50), new Zombie("Hanna",80,false),new Personaje("Omar",99),new Planta("Karen",50),new Zombie("Hanna",80,false),new Planta("Jaime",5,'A')};
         int i =0;
-        //System.out.println(personajes[3].getIdVida());
+        System.out.println(personajes[3].getIdVida());
         while(i<personajes.length){
             
             for(Personaje p : personajes){
