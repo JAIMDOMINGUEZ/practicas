@@ -35,14 +35,15 @@ public class Planta extends Personaje{
         return super.toString()+"{"+escudo+"}";
     }
     public boolean equals(Object x){
-        boolean resultado = false;
+        return(super.equals(x)&& x instanceof Planta && escudo ==((Planta)x).escudo);
+        /*boolean resultado = false;
         if ( (x != null) && (x instanceof Planta) ) {
             Planta pl = (Planta) x;
             if ( (escudo == pl.escudo)&&(super.equals(x))){
                 resultado = true;
                 return resultado;
             }   
-        }return resultado;
+        }return resultado;*/
     }
     /*public String getIdVida(){
         return getIdVida()+""+escudo;//el metodo del padre es final y no se puede modificar

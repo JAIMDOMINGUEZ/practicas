@@ -22,23 +22,24 @@ public class PruebaHerencia{
             
             for(Personaje p : personajes){
                 if(p == personajes[i]){
-                    System.out.println(p.toString()
-                        +"es identico a "+personajes[i].toString()
+                    System.out.println(personajes[i].toString()
+                        +"es identico a "+p.toString()
                         +", son el mismo objeto***");
                         continue;
                     }
                 if(p.equals(personajes[i])){
-                    System.out.println(p.toString()
-                        +"es igual a "+personajes[i].toString()
+                    System.out.println(personajes[i].toString()
+                        +"es igual a "+p.toString()
                         +", son diferentes objetos**");
                         continue;
-                    }System.out.println(p.toString()
-                        +"!="+personajes[i].toString()+"false");
+                    }System.out.println(personajes[i].toString()
+                        +"!="+p.toString());
                     
                     
-                
-            }System.out.println("............................");
+            
+            }System.out.println("............................");   
             i++;
+            
         }
         
         
