@@ -2,10 +2,10 @@
 //Hora de inicio: 7:33
 package mx.com.softgame.poo1game.personajes;
 import static mx.com.softgame.poo1game.Utils.Utileria.*;
-public class Personaje{
+public abstract class Personaje{
     protected String nombre;
-    private int vida;
-    private final int id;
+    protected int vida;
+    protected final int id;
     public Personaje(int id){
         this.id = getID();
     }
