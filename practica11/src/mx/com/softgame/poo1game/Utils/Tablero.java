@@ -8,7 +8,7 @@ public class Tablero {
         this.MAX_LINE = MAX_LINE;
         this.idx = idx;
     }
-    static boolean addPersonaje(Personaje p){
+    public static boolean addPersonaje(Personaje p){
         boolean temp = false;
         if(idx == personajes.length){
             personajes[idx]=p;
@@ -18,7 +18,7 @@ public class Tablero {
         idx++;
         return temp;
     }
-    static boolean delPersonaje(Personaje p){
+    public static boolean delPersonaje(Personaje p){
         boolean temp = false;
         if(idx == personajes.length){
             personajes[idx]=null;
