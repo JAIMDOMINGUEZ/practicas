@@ -10,16 +10,31 @@ public class Tablero {
     }
     static boolean addPersonaje(Personaje p){
         boolean temp = false;
-        if(personajes [idx] == p){
+        if(idx == personajes.length){
+            personajes[idx]=p;
+            idx++;
             return true;
         }
+        idx++;
         return temp;
     }
     static boolean delPersonaje(Personaje p){
         boolean temp = false;
-        if(personajes [idx] == p){
+        if(idx == personajes.length){
+            personajes[idx]=null;
+            idx++;
             return true;
         }
+        idx++;
         return temp;
     }
+    public void showAll(){
+        for(Personaje pe :personajes){
+            if(pe!=null){
+                System.out.println(pe);
+            }
+        }
+
+    }
+
 }
