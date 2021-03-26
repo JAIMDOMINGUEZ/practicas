@@ -12,25 +12,26 @@ public class PruebaTablero {
         new Planta("Oscar", 40)
         };
         int i = -1;
-        while(i<arr.length){
-            for(Personaje p : arr){
-                if(!Tablero.addPersonaje(p)){
-                    System.out.println("No pudo ser Insertado");
-                }
-
+        
+        for(Personaje p : arr){
+            if(!Tablero.addPersonaje(p)){
+                    
+                System.out.println("No pudo ser Insertado");
             }
-            i++;
+            System.out.println(p);
+
         }
-        Tablero.delPersonaje(arr[0]);
+        Tablero.showAll(); 
+        Tablero.delPersonaje(arr[10]);
         Tablero.showAll();
-        while(i<=15){
+        /*while(i<=15){
             for(Personaje p : arr){
                 if(!Tablero.delPersonaje(p)){
                     System.out.println("No pudo ser eliminado");
                 }
             }    
             i++;
-        }
+        }*/
 
     }
 }
