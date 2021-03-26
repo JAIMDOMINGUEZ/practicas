@@ -13,12 +13,16 @@ public class PruebaTablero {
         };
         int i = -1;
         while(i<arr.length){
-            
             for(Personaje p : arr){
-                if(Tablero.addPersonaje(p)){
+                if(!Tablero.addPersonaje(p)){
                     System.out.println("No pudo ser Insertado");
                 }
+
             }
+            i++;
         }
+        Tablero.delPersonaje(arr[0]);
+        Tablero.showAll();
+
     }
 }

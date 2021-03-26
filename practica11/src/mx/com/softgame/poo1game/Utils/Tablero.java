@@ -1,7 +1,7 @@
 package mx.com.softgame.poo1game.Utils;
 import mx.com.softgame.poo1game.personajes.Personaje;
 public class Tablero {
-    static int MAX_LINE;
+    static int MAX_LINE = 10;
     private static int  idx= -1;
     static private Personaje[] personajes = new Personaje [MAX_LINE];
     private Tablero(int MAX_LINE,int idx){
@@ -10,7 +10,7 @@ public class Tablero {
     }
     public static boolean addPersonaje(Personaje p){
         boolean temp = false;
-        if(idx == personajes.length){
+        if(idx >= 0 && idx <= 10){
             personajes[idx]=p;
             idx++;
             return true;
@@ -20,7 +20,7 @@ public class Tablero {
     }
     public static boolean delPersonaje(Personaje p){
         boolean temp = false;
-        if(idx == personajes.length){
+        if(idx >= 0 && idx <= 10){
             personajes[idx]=null;
             idx++;
             return true;
@@ -28,7 +28,7 @@ public class Tablero {
         idx++;
         return temp;
     }
-    public void showAll(){
+    public static void showAll(){
         for(Personaje pe :personajes){
             if(pe!=null){
                 System.out.println(pe);
