@@ -37,11 +37,11 @@ public abstract class Personaje{
             this.vida = vida;
         }
     }
-    public void setNombre(String nombre){
+    public void setNombre(String nombre);/*{
         if(nombre.length()>3 && nombre.length()<10 ){
             this.nombre = nombre;
         }
-    }
+    }*/
     public String getNombre(){
         return nombre;
     }
@@ -51,7 +51,8 @@ public abstract class Personaje{
     public String toString(){
         return "["+id+"]"+"\t"+nombre+"\t"+"("+vida+")"; 
     }
-    public boolean equals(Object x){
+    public boolean equals(Object x);
+    /*{
         boolean resultado = false;
         if ( (x != null) && (x instanceof Personaje) ) {
             Personaje p = (Personaje) x;
@@ -59,7 +60,7 @@ public abstract class Personaje{
                 return true;
             }   
         }return resultado;
-    }
+    }*/
     public final String getIdVida(){
         return id+" "+vida;
     }
