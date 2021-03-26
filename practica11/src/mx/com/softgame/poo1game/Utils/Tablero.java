@@ -10,11 +10,9 @@ public class Tablero {
     }
     public static boolean addPersonaje(Personaje p){
         boolean temp = false;
-        
-        System.out.println(idx);
-        if(idx+1 >= 0 && idx < MAX_LINE){
-            personajes[idx]=p;
+        if((idx+ 1)>= 0 && (idx+1) <MAX_LINE){
             idx++;
+            personajes[idx]=p;
             return true;
         }
         
@@ -22,12 +20,12 @@ public class Tablero {
     }
     public static boolean delPersonaje(Personaje p){
         boolean temp = false;
-        if(idx >= 0 && idx < MAX_LINE){
-            personajes[idx]=null;
+        if((idx- 1)>= 0 && (idx-1) < MAX_LINE){
             idx--;
+            personajes[idx]=null;
             return true;
         }
-        idx--;
+        
         return temp;
     }
     public static void showAll(){

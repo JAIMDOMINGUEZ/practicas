@@ -11,30 +11,28 @@ public class PruebaTablero {
         new Planta("Lesly",9),new Planta("Carlos", 10), new Zombie("Cristian", 20, false),
         new Planta("Oscar", 40)
         };
-        int i = -1;
         
+    
         for(Personaje p : arr){
             if(!Tablero.addPersonaje(p)){
-                    
+                        
                 System.out.println("No pudo ser Insertado");
             }
-            
-
         }
+          
         Tablero.showAll(); 
         System.out.println("................");
-        Tablero.delPersonaje(arr[1]);
-
-        
+        Tablero.delPersonaje(arr[2]);
         Tablero.showAll();
-        /*while(i<=15){
-            for(Personaje p : arr){
-                if(!Tablero.delPersonaje(p)){
+        System.out.println("................");
+        
+        for(int j = 0; j <=15; ++j){
+            if(!Tablero.delPersonaje(arr[2])){
                     System.out.println("No pudo ser eliminado");
-                }
-            }    
-            i++;
-        }*/
+            }
+        }    
+            
+        
 
     }
 }
