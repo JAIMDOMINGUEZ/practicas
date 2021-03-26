@@ -18,11 +18,12 @@ public class PruebaTablero {
                     
                 System.out.println("No pudo ser Insertado");
             }
-            System.out.println(p);
+            
 
         }
         Tablero.showAll(); 
-        Tablero.delPersonaje(arr[10]);
+        System.out.println("................");
+        Tablero.delPersonaje(arr[1]);
         Tablero.showAll();
         /*while(i<=15){
             for(Personaje p : arr){
