@@ -17,6 +17,12 @@ public final class Zombie extends Personaje{
     public boolean getAtaque(){
         return ataque;
     }
+    public  void setNombre(String nombre)
+    {
+        if(nombre.length()>3 && nombre.length()<8 ){
+            this.nombre = nombre;
+        }
+    }
     public void decVida(){
         if(ataque == false){
             super.decVida(3);
@@ -35,16 +41,13 @@ public final class Zombie extends Personaje{
         return super.toString()+"{"+ataque+"}";
     }
     public boolean equals(Object x){
-        return(super.equals(x)&& x instanceof Zombie && ataque ==((Zombie)x).ataque);
-        /*boolean resultado = false;
+        boolean resultado = false;
         if ( (x != null) && (x instanceof Zombie) ) {
             Zombie z = (Zombie) x;
-            if ((ataque == z.ataque) && (super.equals(x))){
-                resultado = true;
-                return resultado;
-            }
-        
-        }return resultado;*/
+            if ( (this.nombre.equals(z.nombre)) && (vida == z.vida)&&(ataque == z.ataque)){
+                return true;
+            }   
+        }return resultado;
     }
     /*public String getIdVida(){
         return super.getIdVida()+""+ataque;//el metodo del padre es final y no se puede modificar
