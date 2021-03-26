@@ -23,6 +23,14 @@ public class PruebaTablero {
         }
         Tablero.delPersonaje(arr[0]);
         Tablero.showAll();
+        while(i<=15){
+            for(Personaje p : arr){
+                if(!Tablero.delPersonaje(p)){
+                    System.out.println("No pudo ser eliminado");
+                }
+            }    
+            i++;
+        }
 
     }
 }
