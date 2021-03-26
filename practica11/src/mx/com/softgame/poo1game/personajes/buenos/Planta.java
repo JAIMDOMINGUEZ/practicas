@@ -17,6 +17,12 @@ public class Planta extends Personaje{
     public Planta(String nombre){
         this(nombre,3,'A');
     }
+    public  void setNombre(String nombre)
+    {
+        if(nombre.length()>5 && nombre.length()<10 ){
+            this.nombre = nombre;
+        }
+    }
     public void decVida(){
         if(escudo == 'A'){
             super.decVida(2);
@@ -35,15 +41,13 @@ public class Planta extends Personaje{
         return super.toString()+" {"+escudo+"}";
     }
     public boolean equals(Object x){
-        return(super.equals(x)&& x instanceof Planta && escudo ==((Planta)x).escudo);
-        /*boolean resultado = false;
+        boolean resultado = false;
         if ( (x != null) && (x instanceof Planta) ) {
             Planta pl = (Planta) x;
-            if ( (escudo == pl.escudo)&&(super.equals(x))){
-                resultado = true;
-                return resultado;
+            if ( (this.nombre.equals(pl.nombre)) && (vida == pl.vida)&&(escudo == pl.escudo)){
+                return true;
             }   
-        }return resultado;*/
+        }return resultado;
     }
     /*public String getIdVida(){
         return getIdVida()+""+escudo;//el metodo del padre es final y no se puede modificar
