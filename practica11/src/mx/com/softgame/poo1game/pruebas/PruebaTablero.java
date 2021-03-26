@@ -24,6 +24,8 @@ public class PruebaTablero {
         Tablero.showAll(); 
         System.out.println("................");
         Tablero.delPersonaje(arr[1]);
+
+        
         Tablero.showAll();
         /*while(i<=15){
             for(Personaje p : arr){
