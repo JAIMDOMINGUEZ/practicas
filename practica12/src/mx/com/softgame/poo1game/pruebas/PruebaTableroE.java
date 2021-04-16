@@ -14,18 +14,17 @@ public class PruebaTableroE {
         new Planta("Aline", 40)
         };
     
-        try{
-            for(Personaje p : arr){
+        
+        for(Personaje p : arr){
+            try {
                 Tablero.addPersonaje(p);
+            }catch (TheException te) {
+                System.out.println(te+""+te.getPoss());
             }
-            
-        } catch (TheException te) {
-            System.out.println(te+""+te.getPoss());
+                
         }
-
-
-
-
+            
+    
         try {
             Tablero.delPersonaje(arr[2]);
         } catch (TheException e) {
@@ -34,18 +33,27 @@ public class PruebaTableroE {
 
         
         Tablero.showAll();
-        int k = 0;
+       
         
+         
+
+        int k=0;
         for(Personaje p : arr){
-            try{
-            Tablero.delPersonaje(p);  
-            } catch (TheException te) {
-            System.out.println(te+""+te.getPoss());
+            while (k<15) {
+                try{
+                    Tablero.delPersonaje(p);  
+                } catch (TheException te) {
+                    System.out.println(te+""+te.getPoss());
+                }
+                k++;
             }
-                
-            }
-        
         }
+        
+            
+                
+        
+        
+    }
     
             
        
