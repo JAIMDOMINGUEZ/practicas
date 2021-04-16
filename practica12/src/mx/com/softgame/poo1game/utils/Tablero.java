@@ -37,7 +37,7 @@ public class Tablero {
         } catch (TheException et) {
             System.out.println("No es posible borrar el personaje"+et.getPoss());
         }
-        
+    // Error en el catch falta throw
         
         
     }
