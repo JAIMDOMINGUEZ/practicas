@@ -13,8 +13,8 @@ public class Tablero {
     public static void addPersonaje(Personaje p) throws TheException{
         boolean temp = false;
             if(idx >= 0 ){
-                idx--;
                 personajes[idx]=p;
+                idx++;
             }else{
             throw new TheException("No es posible insetar el personaje", idx);
             }
@@ -23,21 +23,15 @@ public class Tablero {
         
        
     
-    public static void delPersonaje(Personaje p){
+    public static void delPersonaje(Personaje p) throws TheException{
         boolean temp = false;
-        try {
-            if((idx- 1)>= 0 && (idx-1) < MAX_LINE){
-                idx--;
-                personajes[idx]=null;
-                
-            }
-        } catch (TheException et) {
-            System.out.println("No es posible borrar el personaje"+et.getPoss());
+        if((idx- 1)>= 0 && (idx-1) < MAX_LINE){
+            personajes[idx]=null;
+            idx--;
+            
+        }else{
+            throw new TheException("No es posible borrar el personaje", idx-1);
         }
-    
-    
-    
-    
         // Error en el catch falta throw
         
         

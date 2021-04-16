@@ -13,36 +13,53 @@ public class PruebaTableroE {
         new Planta("Lesly",9),new Planta("Vania", 10), new Zombie("Erick", 20, false),
         new Planta("Aline", 40)
         };
-        for(Personaje p : arr){
-            try {
-                Tablero.addPersonaje(p);
-            } catch (TheException e) {
-                System.out.println(e.getMessage()+e.getPoss());
+    
+        try{
+            for(Personaje p : arr){
+                try {
+                    Tablero.addPersonaje(p);
+                } catch (TheException e) {
+                    System.out.println(e.getMessage()+e.getPoss());
+                }
+                
             }
             
+        } catch (TheException te) {
+            System.out.println(te+""+te.getPoss());
         }
-        Tablero.delPersonaje(arr[2]);
+
+
+
+
+        try {
+            Tablero.delPersonaje(arr[2]);
+        } catch (TheException e) {
+            System.out.println(e.getMessage()+e.getPoss());
+        }
+
+        
         Tablero.showAll();
         int k = 0;
+        try{
         while (k<15) {
             for(Personaje p : arr){
-                Tablero.delPersonaje(p);
+                try {
+                    Tablero.delPersonaje(p);
+                } catch (TheException e) {
+                    System.out.println(e.getMessage()+e.getPoss());
+                }
                 k++;
             }
         }
-        
+    } catch (TheException te) {
+        System.out.println(te+""+te.getPoss());
+    }
          
             
        
 
       
         
-          
-        Tablero.showAll(); 
-        System.out.println("................");
-        Tablero.delPersonaje(arr[2]);
-        
-        System.out.println("................");
         
             
             
