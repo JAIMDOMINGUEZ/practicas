@@ -5,7 +5,7 @@ public class Tablero {
     static int MAX_LINE = 10;
     private static int  idx= -1;
     static private Personaje[] personajes = new Personaje [MAX_LINE];
-    static TheException theExceptionObj = new TheException("",0);
+    
     private Tablero(int MAX_LINE,int idx){
         this.MAX_LINE = MAX_LINE;
         this.idx = idx;
@@ -17,7 +17,6 @@ public class Tablero {
             if(idx >= 0 ){
                 idx--;
                 personajes[idx]=p;
-                
             } 
         } catch (TheException te) {
             System.out.println("No es posible insetar el personaje"+te.getPoss());
@@ -37,7 +36,11 @@ public class Tablero {
         } catch (TheException et) {
             System.out.println("No es posible borrar el personaje"+et.getPoss());
         }
-    // Error en el catch falta throw
+    
+    
+    
+    
+        // Error en el catch falta throw
         
         
     }

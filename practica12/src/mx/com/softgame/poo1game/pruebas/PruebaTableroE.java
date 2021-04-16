@@ -17,6 +17,15 @@ public class PruebaTableroE {
         }
         Tablero.delPersonaje(arr[2]);
         Tablero.showAll();
+        int k = 0;
+        while (k<15) {
+            for(Personaje p : arr){
+                Tablero.delPersonaje(p);
+                k++;
+            }
+        }
+        
+         
             
        
 
