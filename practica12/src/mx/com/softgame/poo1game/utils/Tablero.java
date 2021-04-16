@@ -10,21 +10,19 @@ public class Tablero {
         this.MAX_LINE = MAX_LINE;
         this.idx = idx;
     }
-    public static void addPersonaje(Personaje p){
-        
+    public static void addPersonaje(Personaje p) throws TheException{
         boolean temp = false;
-        try {
             if(idx >= 0 ){
                 idx--;
                 personajes[idx]=p;
-            } 
-        } catch (TheException te) {
-            System.out.println("No es posible insetar el personaje"+te.getPoss());
+            }else{
+            throw new TheException("No es posible insetar el personaje", idx);
+            }
         }
         
         
        
-    }
+    
     public static void delPersonaje(Personaje p){
         boolean temp = false;
         try {
