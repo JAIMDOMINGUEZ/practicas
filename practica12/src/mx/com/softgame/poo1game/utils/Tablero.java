@@ -8,25 +8,30 @@ public class Tablero {
         this.MAX_LINE = MAX_LINE;
         this.idx = idx;
     }
-    public static boolean addPersonaje(Personaje p){
+    public static void addPersonaje(Personaje p){
         boolean temp = false;
-        if(idx >= 0 ){
-            idx--;
-            personajes[idx]=p;
-            return true;
+        try {
+            if(idx >= 0 ){
+                idx--;
+                personajes[idx]=p;
+                
+            } 
+        } catch (Exception e) {
+            
         }
         
-        return temp;
+        
+       
     }
-    public static boolean delPersonaje(Personaje p){
+    public static void delPersonaje(Personaje p){
         boolean temp = false;
         if((idx- 1)>= 0 && (idx-1) < MAX_LINE){
             idx--;
             personajes[idx]=null;
-            return true;
+            
         }
         
-        return temp;
+        
     }
     public static void showAll(){
         for(Personaje pe :personajes){
