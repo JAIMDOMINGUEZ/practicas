@@ -6,8 +6,8 @@ import mx.com.softgame.poo1game.utils.Tablero;
 
 public class PruebaTableroE {
     public static void main(String[]args){
-        Personaje[] arr ={new Planta("Wendy",50), new Zombie("jose",false),
-        new Zombie("Karen",true), new Planta("Giovana",99), new Planta("victor",30),
+        Personaje[] arr ={new Planta("Giovana",50), new Zombie("Miguel",false),
+        new Zombie("Karen",true), new Planta("Leonardo",99), new Planta("Sebastian",30),
         new Zombie("Vania"),new  Planta("Ricardo"),new Zombie("Brian",false),
         new Planta("Lesly",9),new Planta("Carlos", 10), new Zombie("Cristian", 20, false),
         new Planta("Oscar", 40)
@@ -15,10 +15,7 @@ public class PruebaTableroE {
         
       
         for(Personaje p : arr){
-            if(!Tablero.addPersonaje(p)){
-                        
-                System.out.println("No pudo ser Insertado");
-            }
+            
         }
           
         Tablero.showAll(); 
@@ -28,9 +25,7 @@ public class PruebaTableroE {
         System.out.println("................");
         
         for(int j = 0; j <=15; ++j){
-            if(!Tablero.delPersonaje(arr[2])){
-                    System.out.println("No pudo ser eliminado");
-            }
+            
         }    
             
 

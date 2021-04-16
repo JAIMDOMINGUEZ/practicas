@@ -19,8 +19,8 @@ public class Tablero {
                 personajes[idx]=p;
                 
             } 
-        } catch (Exception e) {
-            System.out.println("No es posible insetar el personaje"+theExceptionObj.getPoss());
+        } catch (TheException te) {
+            System.out.println("No es posible insetar el personaje"+te.getPoss());
         }
         
         
@@ -34,8 +34,8 @@ public class Tablero {
                 personajes[idx]=null;
                 
             }
-        } catch (Exception e) {
-            System.out.println("No es posible borrar el personaje"+theExceptionObj.getPoss());
+        } catch (TheException et) {
+            System.out.println("No es posible borrar el personaje"+et.getPoss());
         }
         
         
