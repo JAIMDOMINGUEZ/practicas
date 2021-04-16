@@ -12,16 +12,13 @@ public class Tablero {
     }
     public static void addPersonaje(Personaje p) throws TheException{
         boolean temp = false;
-            if(idx >= 0 ){
-                personajes[idx]=p;
+            if((idx+1) >= 0 && idx+1< MAX_LINE ){
+                personajes[idx+1]=p;
                 idx++;
             }else{
             throw new TheException("No es posible insetar el personaje", idx);
             }
         }
-        
-        
-       
     
     public static void delPersonaje(Personaje p) throws TheException{
         boolean temp = false;
