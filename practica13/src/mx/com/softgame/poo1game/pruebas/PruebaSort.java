@@ -38,6 +38,9 @@ public class PruebaSort {
         ls.add(new Zombie("Miguel",80,false));
         ls.add(new Planta("Karen",50));
         Collections.sort(ls,new SortId());
+        for(Personaje p:ls){
+            System.out.println(p);
+        }
     }
    
 }
