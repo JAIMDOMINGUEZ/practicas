@@ -2,7 +2,7 @@ package mx.com.softgame.poo1game.personajes.buenos;
 import mx.com.softgame.poo1game.personajes.Personaje;
 import mx.com.softgame.poo1game.personajes.malos.Zombie;
 
-public class Planta extends Personaje{
+public class  Planta extends Personaje{
     protected char escudo;
     public Planta(String nombre,int vida,char escudo){
         super(nombre,vida);

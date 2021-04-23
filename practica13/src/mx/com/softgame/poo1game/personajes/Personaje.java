@@ -1,7 +1,7 @@
 
 package mx.com.softgame.poo1game.personajes;
 import static mx.com.softgame.poo1game.utils.Utileria.*;
-public abstract class Personaje{
+public abstract class Personaje {
     protected String nombre;
     protected int vida;
     protected final int id;
@@ -54,6 +54,16 @@ public abstract class Personaje{
     public String toString(){
         return "["+id+"]"+"\t"+nombre+"\t"+"("+vida+")"; 
     }
+    /*
+    public int compareTo(Object o){
+        Personaje p=null;
+        if(o instanceof Personaje){
+            p=(Personaje)o;
+        }
+        int valor = nombre.compareTo()
+        return id;
+        
+    }*/
     public abstract boolean equals(Object x);
     /*{
         boolean resultado = false;
@@ -69,6 +79,13 @@ public abstract class Personaje{
     }
     public int hashCode(){
         return nombre.hashCode()+vida*7;
+    }
+    public int compareTo(Personaje p){
+        int valor = nombre.compareTo(p.nombre);
+        if(valor !=0){
+            return valor;
+        }
+        return id -p.id;
     }
 
 }

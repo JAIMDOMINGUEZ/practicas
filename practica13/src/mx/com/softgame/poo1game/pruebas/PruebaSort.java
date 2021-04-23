@@ -19,7 +19,7 @@ public class PruebaSort {
         ts.add(new Zombie("Miguel",80,false));
         ts.add(new Planta("Karen",50));
         for(Personaje p:ts){
-            System.out.println(ts);
+            System.out.println(p);
         }
         
         System.out.println("************");

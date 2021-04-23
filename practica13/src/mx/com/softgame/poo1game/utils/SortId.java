@@ -3,8 +3,11 @@ import java.util.Comparator;
 
 import mx.com.softgame.poo1game.personajes.Personaje;
 import mx.com.softgame.poo1game.personajes.Personaje.*;
-public class SortId implements Comparator<Personaje>{
-    public int compare(Personaje p1,Personaje p2){
-        return ((Personaje)p1).getId()-(Personaje)p2).getId();
+public class SortId implements Comparator{
+    public int compare(Object o1,Object o2){
+        return ((Personaje) o1).getId()-((Personaje) o2).getId();
     }
+
+    
+
 }
