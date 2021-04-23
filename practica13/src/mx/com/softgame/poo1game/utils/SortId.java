@@ -1,6 +1,5 @@
 package mx.com.softgame.poo1game.utils;
 import java.util.Comparator;
-
 import mx.com.softgame.poo1game.personajes.Personaje;
 import mx.com.softgame.poo1game.personajes.Personaje.*;
 public class SortId implements Comparator{

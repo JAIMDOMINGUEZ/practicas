@@ -13,7 +13,7 @@ public class PruebaSort {
     public static void main(String[]args){
         TreeSet <Personaje>ts = new TreeSet<Personaje>();
         ts.add(new Planta("Cristian",70));
-        ts.add(new Planta("Cristian",70));
+        ts.add(new Planta("Karen",50));
         ts.add(new Zombie("Hanna",80,false));
         ts.add(new Zombie("Erick",false));
         ts.add(new Zombie("Esmeralda",80,false));
@@ -28,7 +28,7 @@ public class PruebaSort {
         System.out.println("************");
         LinkedList<Personaje> ls= new LinkedList<Personaje>();
         ls.add(new Planta("Cristian",70));
-        ls.add(new Planta("Cristian",70));
+        ls.add(new Planta("Karen",50));
         ls.add(new Zombie("Hanna",80,false));
         ls.add(new Zombie("Erick",false));
         ls.add(new Zombie("Esmeralda",80,false));

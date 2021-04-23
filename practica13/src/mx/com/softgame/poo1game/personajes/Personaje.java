@@ -61,7 +61,10 @@ public abstract class Personaje implements Comparable {
             p=(Personaje)o;
         }
         int valor = nombre.compareTo(p.nombre);
-        return id;
+        if (valor !=0) {
+            return valor;
+        }
+        return p.vida-vida;
         
     }
     public abstract boolean equals(Object x);
