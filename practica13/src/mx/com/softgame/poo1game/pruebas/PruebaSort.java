@@ -1,4 +1,5 @@
 package mx.com.softgame.poo1game.pruebas;
+import java.util.LinkedList;
 import java.util.TreeSet;
 
 
@@ -21,8 +22,19 @@ public class PruebaSort {
         for(Personaje p:ts){
             System.out.println(p);
         }
-        
         System.out.println("************");
+        LinkedList<Personaje> ls= new LinkedList<Personaje>();
+        ls.add(new Planta("Cristian",70));
+        ls.add(new Planta("Cristian",70));
+        ls.add(new Zombie("Hanna",80,false));
+        ls.add(new Zombie("Erick",false));
+        ls.add(new Zombie("Esmeralda",80,false));
+        ls.add(new Planta("Miguel",99));
+        ls.add(new Planta("Jaime",50));
+        ls.add(new Zombie("Cristian",80,false));
+        ls.add(new Zombie("Miguel",80,false));
+        ls.add(new Planta("Karen",50));
+  
     }
    
 }

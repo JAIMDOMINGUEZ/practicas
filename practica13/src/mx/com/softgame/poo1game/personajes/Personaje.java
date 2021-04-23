@@ -80,12 +80,13 @@ public abstract class Personaje {
     public int hashCode(){
         return nombre.hashCode()+vida*7;
     }
+    /*
     public int compareTo(Personaje p){
         int valor = nombre.compareTo(p.nombre);
         if(valor !=0){
             return valor;
         }
         return id -p.id;
-    }
+    }*/
 
 }
