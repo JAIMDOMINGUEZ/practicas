@@ -12,6 +12,7 @@ import mx.com.softgame.poo1game.utils.SortId;
 public class PruebaSort {
     public static void main(String[]args){
         TreeSet <Personaje>ts = new TreeSet<Personaje>();
+        
         ts.add(new Planta("Cristian",70));
         ts.add(new Planta("Karen",50));
         ts.add(new Zombie("Hanna",80,false));
@@ -22,9 +23,15 @@ public class PruebaSort {
         ts.add(new Zombie("Cristian",80,false));
         ts.add(new Zombie("Miguel",80,false));
         ts.add(new Planta("Karen",50));
+        
         for(Personaje p:ts){
             System.out.println(p);
+            
         }
+        
+            
+        
+       
         System.out.println("************");
         LinkedList<Personaje> ls= new LinkedList<Personaje>();
         ls.add(new Planta("Cristian",70));
