@@ -1,4 +1,6 @@
 package mx.com.softgame.poo1game.pruebas;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.TreeSet;
 
@@ -6,6 +8,7 @@ import java.util.TreeSet;
 import mx.com.softgame.poo1game.personajes.Personaje;
 import mx.com.softgame.poo1game.personajes.buenos.Planta;
 import mx.com.softgame.poo1game.personajes.malos.Zombie;
+import mx.com.softgame.poo1game.utils.SortId;
 public class PruebaSort {
     public static void main(String[]args){
         TreeSet <Personaje>ts = new TreeSet<Personaje>();
@@ -34,7 +37,7 @@ public class PruebaSort {
         ls.add(new Zombie("Cristian",80,false));
         ls.add(new Zombie("Miguel",80,false));
         ls.add(new Planta("Karen",50));
-  
+        Collections.sort(ls,new SortId());
     }
    
 }
