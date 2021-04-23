@@ -1,12 +1,13 @@
 package mx.com.softgame.poo1game.pruebas;
 import java.util.TreeSet;
 
+
 import mx.com.softgame.poo1game.personajes.Personaje;
 import mx.com.softgame.poo1game.personajes.buenos.Planta;
 import mx.com.softgame.poo1game.personajes.malos.Zombie;
 public class PruebaSort {
     public static void main(String[]args){
-        TreeSet ts = new TreeSet();
+        TreeSet <Personaje>ts = new TreeSet<Personaje>();
         ts.add(new Planta("Cristian",70));
         ts.add(new Planta("Cristian",70));
         ts.add(new Zombie("Hanna",80,false));
@@ -17,9 +18,11 @@ public class PruebaSort {
         ts.add(new Zombie("Cristian",80,false));
         ts.add(new Zombie("Miguel",80,false));
         ts.add(new Planta("Karen",50));
-        for(Personaje p : ts){
-            System.out.println();
+        for(Personaje p:ts){
+            System.out.println(ts);
         }
+        
+        System.out.println("************");
     }
    
 }
