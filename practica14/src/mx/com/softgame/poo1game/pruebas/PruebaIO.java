@@ -49,11 +49,13 @@ public class PruebaIO {
           } catch (Exception e) {
               e.printStackTrace();
           }
-          path += System.getProperty("file.separator")+"pvsz.out";
+          String npath = System.getProperty("user.home")+System.getProperty("file.separator")+"pvsz.out";
           try {
-            FileOutputStream output = new FileOutputStream(path);
+            FileOutputStream output = new FileOutputStream(npath);
             ObjectOutputStream s = new ObjectOutputStream(output); 
-
+            for (Personaje pe : personajes) {
+              s.writeObject (pe);
+            }
             s.close();
           } catch (Exception e) {
             
