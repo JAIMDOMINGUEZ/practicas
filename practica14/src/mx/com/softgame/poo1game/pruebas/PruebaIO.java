@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import mx.com.softgame.poo1game.personajes.Personaje;
+import mx.com.softgame.poo1game.personajes.buenos.Planta;
+import mx.com.softgame.poo1game.personajes.malos.Zombie;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -31,9 +33,17 @@ public class PruebaIO {
               for (int i = 0; i < count; i++) {
                   linea = bufInput.readLine();
                   String[] partes = linea.split(",");
-                  System.out.println(partes [1]);
+                  if(partes[0].equals("Z")){
+                      personajes.add(new Zombie(partes[1]));
+                  }else if(partes[0].equals("P")){
+                    personajes.add(new Planta(partes[1]));
+                  }
 
               }
+              for (Personaje p : personajes){
+              System.out.println(p);
+              }
+              
 
 
 
