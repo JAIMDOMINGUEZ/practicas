@@ -6,15 +6,18 @@ import java.util.Date;
 
 public class PruebaOutIO {
     String npath = System.getProperty("user.home")+System.getProperty("file.separator")+"pvsz.out";
-    
     try {
-        FileInputStream f =new FileInputStream (npath);
-        ObjectInputStream s =new ObjectInputStream (f);
-        
-         s.close ();
+        InputStream file = new FileInputStream(npath);
+        InputStream buffer = new BufferedInputStream(file);
+        ObjectInput input = new ObjectInputStream(buffer);
+       
+          
     } catch (Exception e) {
-     e.printStackTrace ();
+        ex.printStackTrace();
     }
+    
+
    
     }
+    
 }
