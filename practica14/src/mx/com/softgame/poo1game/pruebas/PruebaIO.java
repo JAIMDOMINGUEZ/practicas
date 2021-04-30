@@ -25,10 +25,17 @@ public class PruebaIO {
               FileReader input = new FileReader(archivo);
               BufferedReader bufInput = new BufferedReader(input);
               String linea = null;
-              while((linea=bufInput.readLine())!=null)
-              {
-                System.out.println(linea);
+              String cuantos = bufInput.readLine();
+              int count = Integer.valueOf(cuantos);
+              System.out.println(count);
+              for (int i = 0; i < count; i++) {
+                  System.out.println(bufInput.readLine());
               }
+
+
+
+
+              
               bufInput.close();
           } catch (Exception e) {
               e.printStackTrace();
