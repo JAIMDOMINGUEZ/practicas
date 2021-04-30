@@ -16,8 +16,15 @@ public class PruebaIO {
        if (archivo.exists()) {
             System.out.println();
             ArrayList<Personaje> personajes = new ArrayList<Personaje>();
-            FileReader fr =new FileReader();
-            BufferReader br = new Bufferreader();
+            try {
+              FileReader fr =new FileReader();
+              BufferReader br = new Bufferreader();
+              
+          } catch (Exception e) {
+              
+          }
+  
+           
       }else{
         System.out.println("El archivo no existe,fin del programa");
 
