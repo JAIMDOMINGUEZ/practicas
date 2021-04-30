@@ -8,7 +8,9 @@ import mx.com.softgame.poo1game.personajes.malos.Zombie;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.ObjectOutputStream;
 import java.nio.Buffer;
 public class PruebaIO {
     public static void main(String[] args) {
@@ -43,16 +45,20 @@ public class PruebaIO {
               for (Personaje p : personajes){
               System.out.println(p);
               }
-              
-
-
-
-
-              
               bufInput.close();
           } catch (Exception e) {
               e.printStackTrace();
           }
+          path += System.getProperty("file.separator")+"pvsz.out";
+          try {
+            FileOutputStream output = new FileOutputStream(path);
+            ObjectOutputStream s = new ObjectOutputStream(output); 
+
+            s.close();
+          } catch (Exception e) {
+            
+          }
+          
                  
       }else{
         System.out.println("El archivo no existe,fin del programa");
