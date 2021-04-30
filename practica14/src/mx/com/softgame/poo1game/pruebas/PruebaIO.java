@@ -1,11 +1,9 @@
 package mx.com.softgame.poo1game.pruebas;
 import java.util.ArrayList;
 import java.util.Scanner;
-
 import mx.com.softgame.poo1game.personajes.Personaje;
 import mx.com.softgame.poo1game.personajes.buenos.Planta;
 import mx.com.softgame.poo1game.personajes.malos.Zombie;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -35,10 +33,12 @@ public class PruebaIO {
               for (int i = 0; i < count; i++) {
                   linea = bufInput.readLine();
                   String[] partes = linea.split(",");
+                  
                   if(partes[0].equals("Z")){
                       personajes.add(new Zombie(partes[1]));
-                  }else if(partes[0].equals("P")){
-                    personajes.add(new Planta(partes[1]));
+                  }else{
+                      personajes.add(new Planta(partes[1]));
+                     
                   }
 
               }
@@ -50,11 +50,13 @@ public class PruebaIO {
               e.printStackTrace();
           }
           String npath = System.getProperty("user.home")+System.getProperty("file.separator")+"pvsz.out";
+          System.out.println("Canstidad"+personajes.size());
           try {
             FileOutputStream output = new FileOutputStream(npath);
             ObjectOutputStream s = new ObjectOutputStream(output); 
             for (Personaje pe : personajes) {
-              s.writeObject (pe);
+              
+                s.writeObject (pe);
             }
             s.close();
           } catch (Exception e) {
