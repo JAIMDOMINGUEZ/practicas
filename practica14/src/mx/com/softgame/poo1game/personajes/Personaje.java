@@ -2,7 +2,7 @@
 package mx.com.softgame.poo1game.personajes;
 import java.io.Serializable;
 import  mx.com.softgame.poo1game.utils.Utileria.*;
-public abstract class Personaje implements Serializable {
+public abstract class Personaje  implements Comparable < Personaje > ,Serializable {
     protected String nombre;
     protected int vida;
     protected final int id;

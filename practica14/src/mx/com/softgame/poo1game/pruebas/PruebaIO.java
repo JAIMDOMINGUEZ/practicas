@@ -7,5 +7,9 @@ public class PruebaIO {
        String path = System.getProperty("user.home");
        path += "\\"+fle.trim();
        System.Out.println(path) ;
+       File myFile = new File("fle");
+      
+
+        
    } 
 }
