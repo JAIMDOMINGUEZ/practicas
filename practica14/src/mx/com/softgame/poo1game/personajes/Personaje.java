@@ -58,9 +58,7 @@ public abstract class Personaje  implements Comparable < Personaje > ,Serializab
     
     public int compareTo (Personaje p){
         //Personaje p=null;
-        if(o instanceof Personaje){
-            p=(Personaje)o;
-        }
+        
         int valor = nombre.compareTo(p.nombre);
         if (valor !=0) {
             return valor;
