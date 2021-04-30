@@ -1,23 +1,23 @@
 
 package mx.com.softgame.poo1game.personajes;
-import static mx.com.softgame.poo1game.utils.Utileria.*;
-public abstract class Personaje implements Comparablex<Personaje> {
+import  mx.com.softgame.poo1game.utils.Utileria.*;
+public abstract class Personaje implements Comparable<Personaje> {
     protected String nombre;
     protected int vida;
     protected final int id;
     public Personaje(int id){
-        this.id = getID();
+        this.id = getId();
     }
     public Personaje(String nombre,int vida){
         this.nombre = nombre;
         this.vida= vida;
-        id = getID();
+        id = getId();
         
     }
     public Personaje(String nombre){
         this.nombre = nombre;
         vida= 3;    
-        id = getID();
+        id = getId();
     }
     
     public void decVida(){
