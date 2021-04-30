@@ -24,12 +24,15 @@ public class PruebaIO {
             try {
               FileReader input = new FileReader(archivo);
               BufferedReader bufInput = new BufferedReader(input);
-              String linea = null;
+              String linea ;
               String cuantos = bufInput.readLine();
               int count = Integer.valueOf(cuantos);
               System.out.println(count);
               for (int i = 0; i < count; i++) {
-                  System.out.println(bufInput.readLine());
+                  linea = bufInput.readLine();
+                  String[] partes = linea.split(",");
+                  System.out.println(partes [1]);
+
               }
 
 
