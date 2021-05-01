@@ -29,7 +29,7 @@ public class PruebaOutIO {
            
         }
     }else{
-
+            System.out.println("E archivo no existe");
     }
         
         
