@@ -8,6 +8,7 @@ import javax.swing.JTextField;
 import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.awt.event.ActionEvent;
 
 public class VentanaPrincipal {
     JFrame f;
@@ -38,7 +39,7 @@ public class VentanaPrincipal {
         f.add(btnOpen);
         btnOpen.addActionListener(new ActionListener(){
           public void actionPerformed(ActionEvent e){
-               //openFile();
+               openFile();
           }
           });  
 
@@ -62,5 +63,12 @@ public class VentanaPrincipal {
     VentanaPrincipal v = new VentanaPrincipal();
     v.initComponents();
     
+   }
+   public void openFile(){
+     String file = txtFil.getText();
+     String path = System.getProperty("user.home")+System.getProperty("file.separator")+file;
+     System.out.println(path);
+     txtCont.setText("");
+     
    }
 }
