@@ -69,6 +69,13 @@ public class VentanaPrincipal {
      String path = System.getProperty("user.home")+System.getProperty("file.separator")+file;
      System.out.println(path);
      txtCont.setText("");
-     
+     File archivo = new File(npath);
+     if (archivo.exists()) {
+          archivo.getContenido();
+
+     }
+     else{
+          JOptionPane.showMessageDialog("No exite el archivo");
+     }
    }
 }
