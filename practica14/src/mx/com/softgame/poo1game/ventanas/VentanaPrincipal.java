@@ -1,4 +1,5 @@
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -26,6 +27,17 @@ public class VentanaPrincipal {
     btnExit = new JButton("Salir");
    } 
    private void initComponents() {
-       
+    f.setLayout(new FlowLayout());
+    f.add(lblFile);
+    f.add(txtFil);
+    f.add(btnOpen);
+    f.add(txtCont);
+    f.add(lblLeidos);
+    f.add(lblN);
+    f.add(btnExit);
+    ven.setSize(550,440);
+    setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+    ven.setVisible(true);
+
    }
 }
