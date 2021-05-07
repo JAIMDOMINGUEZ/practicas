@@ -7,7 +7,10 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.nio.Buffer;
 import java.awt.event.ActionEvent;
 import javax.swing.JOptionPane;
 
@@ -74,16 +77,27 @@ public class VentanaPrincipal {
      if (archivo.exists()) {
           //
           if(archivo.isFile()){
-               //archivo.getContenido();
+               //getContenido(archivo);
           }
           if(archivo.isDirectory()){
-               //archivo.getlist();
+              //getlist(archivo);
           }
 
           
      }
      else{
-          JOptionPane.showMessageDialog(btnExit, "El archivo no existe ");
+          JOptionPane.showMessageDialog(f, "El archivo no existe ");
+     }
+   }
+   public getContenido(File f){
+     try {
+          FileReader fe = new FileReader(f);
+          BufferedReader be = BufferedReader(fe);
+          int count;
+
+     } catch (Exception e) {
+          e.printStackTrace();
      }
    }
 }
+
