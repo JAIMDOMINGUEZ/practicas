@@ -13,7 +13,8 @@ import java.io.FileReader;
 import java.nio.Buffer;
 import java.awt.event.ActionEvent;
 import javax.swing.JOptionPane;
-
+import java.io.BufferedReader;
+import java.io.FileReader;
 public class VentanaPrincipal {
     JFrame f;
     JLabel lblFile;
@@ -69,35 +70,43 @@ public class VentanaPrincipal {
     
    }
    public void openFile(){
-     String file = txtFil.getText();
-     String path = System.getProperty("user.home")+System.getProperty("file.separator")+file;
-     System.out.println(path);
-     txtCont.setText("");
-     File archivo = new File(path);
-     if (archivo.exists()) {
-          //
+          String file = txtFil.getText();
+          String path = System.getProperty("user.home")+System.getProperty("file.separator")+file;
+          System.out.println(path);
+          txtCont.setText("");
+          File archivo = new File(path);
+          if (!archivo.exists()) {
+               JOptionPane.showMessageDialog(f, "El archivo no existe ");
+               return;
+          }
+          
           if(archivo.isFile()){
-               //getContenido(archivo);
+               getContenido(archivo);
           }
           if(archivo.isDirectory()){
-              //getlist(archivo);
+               //getlist(archivo);
           }
+     
+     }
+     
+     public void getContenido(File f){
+          try {
+               FileReader fe = new FileReader(f);
+               BufferedReader be = new BufferedReader(fe);
+               int count;
+               String linea;
+               while((linea = be.readLine())!=null) {
+                    txtCont.append(linea+"\n");
+                    System.out.println(linea);
+                }
+               be.close();
 
+          } catch (Exception e) {
+               e.printStackTrace();
+          }
           
      }
-     else{
-          JOptionPane.showMessageDialog(f, "El archivo no existe ");
-     }
-   }
-   public getContenido(File f){
-     try {
-          FileReader fe = new FileReader(f);
-          BufferedReader be = BufferedReader(fe);
-          int count;
-
-     } catch (Exception e) {
-          e.printStackTrace();
-     }
-   }
+   
+  
 }
 
