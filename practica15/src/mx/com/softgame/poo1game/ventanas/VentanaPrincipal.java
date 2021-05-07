@@ -3,6 +3,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import java.awt.FlowLayout;
 
 public class VentanaPrincipal {
     JFrame f;
@@ -10,20 +11,20 @@ public class VentanaPrincipal {
     JTextField txtFil;
     JButton btnOpen;
     JTextArea txtCont;
-    Jlabel lblN;
+    JLabel lblN;
     JLabel lblLeidos;
-    Jbutton btnExit;
+    JButton btnExit;
    public VentanaPrincipal(){
-        f = new Jframe();
+        f = new JFrame();
         f.setTitle("Practica 14");
-        lblFile = new Jlabel("Nombre del arhivo");
+        lblFile = new JLabel("Nombre del arhivo");
         txtFil = new JTextField();
-        btnOpen = JButton("Abrir archivo");
-        txtCont = JTextArea();
+        btnOpen = new JButton("Abrir archivo");
+        txtCont = new JTextArea();
         txtCont.setColumns(40);
         txtCont.setRows(30);
         lblLeidos = new JLabel("Caracteres Leidos");
-        lblN = new Jlabel("0");
+        lblN = new JLabel("0");
         btnExit = new JButton("Salir");
    } 
    private void initComponents() {
@@ -31,13 +32,14 @@ public class VentanaPrincipal {
         f.add(lblFile);
         f.add(txtFil);
         f.add(btnOpen);
+        //btnOpen.addActionListener(l);
         f.add(txtCont);
         f.add(lblLeidos);
         f.add(lblN);
         f.add(btnExit);
-        ven.setSize(550,440);
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        ven.setVisible(true);
+        f.setSize(550,440);
+        f.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        f.setVisible(true);
 
    }
    public static void main(String[]args){
