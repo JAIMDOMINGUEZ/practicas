@@ -76,7 +76,7 @@ public class VentanaPrincipal {
           txtCont.setText("");
           File archivo = new File(path);
           if (!archivo.exists()) {
-               JOptionPane.showMessageDialog(f, "El archivo no existe ");
+               JOptionPane.showMessageDialog(f,"El archivo no existe ");
                return;
           }
           
@@ -84,7 +84,7 @@ public class VentanaPrincipal {
                getContenido(archivo);
           }
           if(archivo.isDirectory()){
-               //getlist(archivo);
+               getlist(archivo);
           }
      
      }
@@ -93,18 +93,41 @@ public class VentanaPrincipal {
           try {
                FileReader fe = new FileReader(f);
                BufferedReader be = new BufferedReader(fe);
-               int count;
+               int count = 0;
                String linea;
                while((linea = be.readLine())!=null) {
                     txtCont.append(linea+"\n");
+                    count = linea.length()+count;
                     System.out.println(linea);
                 }
                be.close();
-
+               lblN.setText(Integer.toString(count));
           } catch (Exception e) {
                e.printStackTrace();
-          }
+          } 
+     }
+     public void getlist(File f){
+         
           
+          try {
+               //FileReader fe = new FileReader(f);
+               String[] contenido = f.list();
+               //BufferedReader be = new BufferedReader(fe);
+               int count = 0;
+               
+               for (String linea : contenido) {
+                    if(linea!=null){
+                         txtCont.append(linea+"\n");
+                         count = linea.length()+count;
+                         System.out.println(linea);
+                    }
+               }
+               
+               
+               lblN.setText(Integer.toString(count));
+          } catch (Exception e) {
+               e.printStackTrace();
+          } 
      }
    
   
