@@ -9,6 +9,7 @@ import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.awt.event.ActionEvent;
+import javax.swing.JOptionPane;
 
 public class VentanaPrincipal {
     JFrame f;
@@ -69,13 +70,20 @@ public class VentanaPrincipal {
      String path = System.getProperty("user.home")+System.getProperty("file.separator")+file;
      System.out.println(path);
      txtCont.setText("");
-     File archivo = new File(npath);
+     File archivo = new File(path);
      if (archivo.exists()) {
-          archivo.getContenido();
+          //
+          if(archivo.isFile()){
+               //archivo.getContenido();
+          }
+          if(archivo.isDirectory()){
+               //archivo.getlist();
+          }
 
+          
      }
      else{
-          JOptionPane.showMessageDialog("No exite el archivo");
+          JOptionPane.showMessageDialog(btnExit, "El archivo no existe ");
      }
    }
 }
