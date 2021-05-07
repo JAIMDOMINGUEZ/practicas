@@ -1,9 +1,13 @@
+package mx.com.softgame.poo1game.ventanas;
+import javax.swing.Action;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import java.awt.FlowLayout;
+import java.awt.event.ActionListener;
+import java.io.File;
 
 public class VentanaPrincipal {
     JFrame f;
@@ -18,7 +22,7 @@ public class VentanaPrincipal {
         f = new JFrame();
         f.setTitle("Practica 14");
         lblFile = new JLabel("Nombre del arhivo");
-        txtFil = new JTextField();
+        txtFil = new JTextField(20);
         btnOpen = new JButton("Abrir archivo");
         txtCont = new JTextArea();
         txtCont.setColumns(40);
@@ -32,11 +36,23 @@ public class VentanaPrincipal {
         f.add(lblFile);
         f.add(txtFil);
         f.add(btnOpen);
-        //btnOpen.addActionListener(l);
+        btnOpen.addActionListener(new ActionListener(){
+          public void actionPerformed(ActionEvent e){
+               //openFile();
+          }
+          });  
+
+         
         f.add(txtCont);
         f.add(lblLeidos);
         f.add(lblN);
         f.add(btnExit);
+        btnExit.addActionListener(new ActionListener(){
+          public void actionPerformed(ActionEvent o){
+               f.dispose();
+          }
+          }); 
+        f.pack();
         f.setSize(550,440);
         f.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         f.setVisible(true);
