@@ -1,25 +1,27 @@
 package  mx.com.softgame.poo1game.hilos;
-
-
-
 import javax.swing.JLabel;
 
 public class Hilo extends Thread{
     JLabel etiqueta;
-    public Hilo(String name,Jlabel etiqueta){
+    public Hilo(String name,JLabel etiqueta){
         name = "";
         etiqueta = new JLabel("");
     }
     public void run(){
-        String str;
+        String str ="";
         for (int i = 0; i < 30; i++) {
             str = etiqueta.getText();
             char c = str.charAt(str.length()-1);
             etiqueta.setText(str);
-            int n = Math.random()*1000+0;
-            Thread.sleep(n);
+            int n = (int)(Math.random()*1000);
+            try {
+                Thread.sleep(n);
+            } catch (Exception e) {
+                System.err.println(e);        }     
         }
-        str = str+"Hecho";
+            
+        
+        str = (str+"Hecho");
         etiqueta.setText(str);
 
     }

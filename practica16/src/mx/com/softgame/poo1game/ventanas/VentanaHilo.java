@@ -1,12 +1,13 @@
 package mx.com.softgame.poo1game.ventanas;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenuBar;
+import javax.swing.JMenu;
 import javax.swing.JMenuItem;
-
+import java.awt.GridLayout;
+import  mx.com.softgame.poo1game.hilos.Hilo;
 public class VentanaHilo extends JFrame {
     JMenuBar menubar;
     JLabel lblA;
@@ -16,7 +17,7 @@ public class VentanaHilo extends JFrame {
     JMenu mnuArchivo;
     JMenuItem mnuinicio;
     JMenuItem mnuSalir;
-     JFrame f;    
+       
     public void InitComponents( ){
         
         menubar = new JMenuBar();
@@ -24,15 +25,15 @@ public class VentanaHilo extends JFrame {
         lblB = new JLabel("B");
         lblC = new JLabel("C");
         lblD = new JLabel("D");
-        mnuArchivo = new JLabel("Archivo");
+        mnuArchivo = new JMenu("Archivo");
         mnuinicio = new JMenuItem("Inicio");
         mnuSalir = new JMenuItem("Salir");
         this.setLayout (new GridLayout(4,1));
-        menuArchivo.add(mnuinicio);
-        menuArchivo.add(mnuSalir);
+        mnuArchivo.add(mnuinicio);
+        mnuArchivo.add(mnuSalir);
         mnuSalir.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                this.dispose();
+                dispose();
                
             }
             }); 
@@ -42,21 +43,24 @@ public class VentanaHilo extends JFrame {
                    
             }
             });
-        this.add(b1);
-        this.add(b2);
+        this.add(lblA);
+        this.add(lblB);
+        this.add(lblC);
+        this.add(lblD);
         this.pack();
         this.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         this.setSize(400,600);
+        
     }
-    public void VentanaHilo(int i,String s){
+    public void VentanaHilo(){
         InitComponents();
-
+        
     }
     public void iniciarHilos(){
-        Hilo hilo1 = new Hilo();
-        Hilo hilo2 = new Hilo();
-        Hilo hilo3 = new Hilo();
-        Hilo hilo4 = new Hilo();
+        Hilo hilo1 = new Hilo("A",lblA);
+        Hilo hilo2 = new Hilo("B",lblB);
+        Hilo hilo3 = new Hilo("C",lblC);
+        Hilo hilo4 = new Hilo("C",lblC);
         hilo1.start();
         hilo2.start();
         hilo3.start();
