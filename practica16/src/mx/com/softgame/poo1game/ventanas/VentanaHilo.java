@@ -37,6 +37,7 @@ public class VentanaHilo extends JFrame {
 
     }
     public void VentanaHilo(int i,String s){
-
+        InitComponents();
+        
     }
 }
