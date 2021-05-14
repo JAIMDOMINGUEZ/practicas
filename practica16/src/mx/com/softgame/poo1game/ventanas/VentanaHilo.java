@@ -31,6 +31,8 @@ public class VentanaHilo extends JFrame {
         this.setLayout (new GridLayout(4,1));
         mnuArchivo.add(mnuinicio);
         mnuArchivo.add(mnuSalir);
+        menubar.add(mnuArchivo);
+        this.setJMenuBar(menubar);
         mnuSalir.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 dispose();
@@ -50,7 +52,7 @@ public class VentanaHilo extends JFrame {
         this.pack();
         this.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         this.setSize(400,600);
-        
+        this.setVisible(true);
     }
     public void VentanaHilo(){
         InitComponents();
@@ -60,7 +62,7 @@ public class VentanaHilo extends JFrame {
         Hilo hilo1 = new Hilo("A",lblA);
         Hilo hilo2 = new Hilo("B",lblB);
         Hilo hilo3 = new Hilo("C",lblC);
-        Hilo hilo4 = new Hilo("C",lblC);
+        Hilo hilo4 = new Hilo("C",lblD);
         hilo1.start();
         hilo2.start();
         hilo3.start();
