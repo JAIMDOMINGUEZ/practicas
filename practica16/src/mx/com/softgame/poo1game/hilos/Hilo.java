@@ -17,7 +17,7 @@ public class Hilo extends Thread{
             char c = str.charAt(str.length()-1);
             etiqueta.setText(str);
             int n = Math.random()*1000+0;
-            this.sleep(n);
+            Thread.sleep(n);
         }
         str = str+"Hecho";
         etiqueta.setText(str);
