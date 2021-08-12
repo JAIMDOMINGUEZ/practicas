@@ -1,4 +1,5 @@
 package mx.com.softgame.poo1game.ventanas;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
@@ -7,7 +8,8 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import java.awt.GridLayout;
-import  mx.com.softgame.poo1game.hilos.Hilo;
+import mx.com.softgame.poo1game.hilos.Hilo;
+
 public class VentanaHilo extends JFrame {
     JMenuBar menubar;
     JLabel lblA;
@@ -17,9 +19,8 @@ public class VentanaHilo extends JFrame {
     JMenu mnuArchivo;
     JMenuItem mnuinicio;
     JMenuItem mnuSalir;
-       
-    public void InitComponents( ){
-        
+    
+    public void initComponents(){
         menubar = new JMenuBar();
         lblA = new JLabel("A");
         lblB = new JLabel("B");
@@ -49,14 +50,13 @@ public class VentanaHilo extends JFrame {
         this.add(lblB);
         this.add(lblC);
         this.add(lblD);
-        this.pack();
+        
         this.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         this.setSize(400,600);
-        this.setVisible(true);
+        //this.setVisible(true);
     }
-    public void VentanaHilo(){
-        InitComponents();
-        
+    public  VentanaHilo(){
+        initComponents();
     }
     public void iniciarHilos(){
         Hilo hilo1 = new Hilo("A",lblA);
@@ -67,9 +67,5 @@ public class VentanaHilo extends JFrame {
         hilo2.start();
         hilo3.start();
         hilo4.start();
-
-
-
     }
-
 }
